@@ -31,12 +31,6 @@ class TurtleMimic(Node):
             return
 
         self.get_logger().info('Goal accepted :)')
-    #     result_future = goal_handle.get_result_async()
-    #     result_future.add_done_callback(self.get_result_callback)
-
-    # def get_result_callback(self, future):
-    #     result = future.result().result
-    #     self.get_logger().info('Rotation result: {0}'.format(result))
 
     def listener_callback(self, msg):
         dx = msg.x - self.last_x
